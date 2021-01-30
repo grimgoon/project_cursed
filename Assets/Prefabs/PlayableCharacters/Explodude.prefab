@@ -4907,7 +4907,7 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  BoundParticleSystem: {fileID: 635226574847410809}
+  BoundParticleSystem: {fileID: 0}
   MoveToPosition: 0
   RandomParticleSystems: []
 --- !u!1 &636349966254610971
@@ -4939,7 +4939,6 @@ Transform:
   m_Children:
   - {fileID: 8299848010699984658}
   - {fileID: 630768055090684531}
-  - {fileID: 635226574847410815}
   m_Father: {fileID: 638965659756307837}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5147,7 +5146,7 @@ MonoBehaviour:
   UseInputBuffer: 1
   BufferSize: 2
   FastDirectionChanges: 1
-  IdleThreshold: 0.05
+  IdleThreshold: 1
   ObstacleDetectionOffset: {x: 0, y: 0.5, z: 0}
   PerfectTile: 0
   CurrentCellCoordinates: {x: 0, y: 0, z: 0}
@@ -34587,84 +34586,3 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!1001 &7174174137128045978
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 630658203375955737}
-    m_Modifications:
-    - target: {fileID: 7736918534380638181, guid: 55579b31fdb05fe48863e50132ac51a4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736918534380638181, guid: 55579b31fdb05fe48863e50132ac51a4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736918534380638181, guid: 55579b31fdb05fe48863e50132ac51a4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.552
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736918534380638181, guid: 55579b31fdb05fe48863e50132ac51a4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736918534380638181, guid: 55579b31fdb05fe48863e50132ac51a4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736918534380638181, guid: 55579b31fdb05fe48863e50132ac51a4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736918534380638181, guid: 55579b31fdb05fe48863e50132ac51a4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736918534380638181, guid: 55579b31fdb05fe48863e50132ac51a4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736918534380638181, guid: 55579b31fdb05fe48863e50132ac51a4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736918534380638181, guid: 55579b31fdb05fe48863e50132ac51a4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736918534380638181, guid: 55579b31fdb05fe48863e50132ac51a4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736918534380638182, guid: 55579b31fdb05fe48863e50132ac51a4,
-        type: 3}
-      propertyPath: m_Name
-      value: WalkParticles
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 55579b31fdb05fe48863e50132ac51a4, type: 3}
---- !u!198 &635226574847410809 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7736918534380638179, guid: 55579b31fdb05fe48863e50132ac51a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 7174174137128045978}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &635226574847410815 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7736918534380638181, guid: 55579b31fdb05fe48863e50132ac51a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 7174174137128045978}
-  m_PrefabAsset: {fileID: 0}

@@ -102,6 +102,11 @@ PrefabInstance:
       propertyPath: RequiresPerfectTile
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 668245297844282597, guid: be4545189848dbb44996f7fc9b4d53cb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 668567461718734757, guid: be4545189848dbb44996f7fc9b4d53cb,
         type: 3}
       propertyPath: CharacterAnimator
