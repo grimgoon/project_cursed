@@ -1,0 +1,1 @@
+{"buildLocationPath":"C:/Users/Alexander Hermansson/Documents/git/project_cursed/Local/Trail/Build","buildTime":637477108059412693,"uploaded":true,"uploadTime":637477110783037702}
