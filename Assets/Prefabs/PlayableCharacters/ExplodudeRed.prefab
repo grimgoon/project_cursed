@@ -97,6 +97,11 @@ PrefabInstance:
       propertyPath: Model
       value: 
       objectReference: {fileID: 2090704487559438578}
+    - target: {fileID: 668219699336140065, guid: be4545189848dbb44996f7fc9b4d53cb,
+        type: 3}
+      propertyPath: ObstaclesLayerMask.m_Bits
+      value: 9984
+      objectReference: {fileID: 0}
     - target: {fileID: 668245297844282597, guid: be4545189848dbb44996f7fc9b4d53cb,
         type: 3}
       propertyPath: RequiresPerfectTile
@@ -130,6 +135,16 @@ PrefabInstance:
     - target: {fileID: 7927173460686708831, guid: be4545189848dbb44996f7fc9b4d53cb,
         type: 3}
       propertyPath: FastDirectionChanges
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927173460686708831, guid: be4545189848dbb44996f7fc9b4d53cb,
+        type: 3}
+      propertyPath: IdleThreshold
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927173460686708831, guid: be4545189848dbb44996f7fc9b4d53cb,
+        type: 3}
+      propertyPath: BufferSize
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8237206009395236699, guid: be4545189848dbb44996f7fc9b4d53cb,

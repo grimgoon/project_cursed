@@ -9,8 +9,8 @@ namespace MoreMountains.TopDownEngine
     /// a controller to move a rigidbody2D and collider2D around in top down view
     /// </summary>
     [AddComponentMenu("TopDown Engine/Character/Core/TopDown Controller 2D")]
-    public class TopDownController2D : TopDownController 
-	{
+    public class TopDownController2D : TopDownController
+    {
         /// whether or not the character is above a hole right now
         [MMReadOnly]
         [Tooltip("whether or not the character is above a hole right now")]
@@ -73,7 +73,7 @@ namespace MoreMountains.TopDownEngine
                 }
             }
         }
-        
+
         public Vector2 ColliderOffset
         {
             get
@@ -111,7 +111,7 @@ namespace MoreMountains.TopDownEngine
                 }
             }
         }
-        
+
         public Bounds ColliderBounds
         {
             get
@@ -181,7 +181,7 @@ namespace MoreMountains.TopDownEngine
             _holeTestMin = Physics2D.OverlapPoint((Vector2)ColliderBounds.min, HoleLayerMask);
             _holeTestMax = Physics2D.OverlapPoint((Vector2)ColliderBounds.max, HoleLayerMask);
             Grounded = (_groundedTest != null);
-            OverHole = ((_holeTestMin != null) && (_holeTestMax != null));                        
+            OverHole = ((_holeTestMin != null) && (_holeTestMax != null));
             JustGotGrounded = (!_groundedLastFrame && Grounded);
             _groundedLastFrame = Grounded;
         }
@@ -248,15 +248,15 @@ namespace MoreMountains.TopDownEngine
             {
                 CurrentMovement = CurrentMovement / Friction;
             }
-            
+
             // if we have a low friction (ice, marbles...) we lerp the speed accordingly
             if (Friction > 0 && Friction < 1)
             {
                 CurrentMovement = Vector3.Lerp(Speed, CurrentMovement, Time.deltaTime * Friction);
             }
-            
+
             Vector2 newMovement = _rigidBody.position + (Vector2)(CurrentMovement + AddedForce) * Time.fixedDeltaTime;
-            
+
             if (OnAMovingPlatform)
             {
                 newMovement += (Vector2)_movingPlatform.CurrentSpeed * Time.fixedDeltaTime;
@@ -295,7 +295,7 @@ namespace MoreMountains.TopDownEngine
         {
             Impact(movement.normalized, movement.magnitude);
         }
-        
+
         /// <summary>
         /// Sets the current movement
         /// </summary>
@@ -338,7 +338,7 @@ namespace MoreMountains.TopDownEngine
             ColliderSize = _originalColliderSize;
             ColliderOffset = _originalColliderCenter;
         }
-        
+
         /// <summary>
         /// Determines the controller's current direction
         /// </summary>

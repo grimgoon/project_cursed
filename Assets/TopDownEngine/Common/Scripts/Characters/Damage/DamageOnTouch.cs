@@ -116,7 +116,7 @@ namespace MoreMountains.TopDownEngine
             _boxCollider = GetComponent<BoxCollider>();
             _sphereCollider = GetComponent<SphereCollider>();
             _circleCollider2D = GetComponent<CircleCollider2D>();
-            
+
             _gizmosColor = Color.red;
             _gizmosColor.a = 0.25f;
             if (_boxCollider2D != null) { SetGizmoOffset(_boxCollider2D.offset); }
@@ -197,7 +197,7 @@ namespace MoreMountains.TopDownEngine
             if (Time.deltaTime != 0f)
             {
                 _velocity = (_lastPosition - (Vector3)transform.position) / Time.deltaTime;
-            }            
+            }
             _lastPosition = transform.position;
         }
 
@@ -234,6 +234,7 @@ namespace MoreMountains.TopDownEngine
         /// <param name="collider"></param>
         public virtual void OnTriggerEnter(Collider collider)
         {
+            Debug.Log("Got Here");
             Colliding(collider.gameObject);
         }
 
@@ -382,7 +383,7 @@ namespace MoreMountains.TopDownEngine
             {
                 if (_boxCollider2D.enabled)
                 {
-                    MMDebug.DrawGizmoCube(this.transform, 
+                    MMDebug.DrawGizmoCube(this.transform,
                                             _gizmoOffset,
                                             _boxCollider2D.size,
                                             false);
@@ -393,7 +394,7 @@ namespace MoreMountains.TopDownEngine
                                             _gizmoOffset,
                                             _boxCollider2D.size,
                                             true);
-                }                
+                }
             }
 
             if (_circleCollider2D != null)
@@ -407,8 +408,8 @@ namespace MoreMountains.TopDownEngine
                     Gizmos.DrawWireSphere((Vector2)this.transform.position + _circleCollider2D.offset, _circleCollider2D.radius);
                 }
             }
-            
-            if (_boxCollider != null) 
+
+            if (_boxCollider != null)
             {
                 if (_boxCollider.enabled)
                 {
@@ -425,7 +426,7 @@ namespace MoreMountains.TopDownEngine
                                             true);
                 }
             }
-            
+
             if (_sphereCollider != null)
             {
                 if (_sphereCollider.enabled)
@@ -435,7 +436,7 @@ namespace MoreMountains.TopDownEngine
                 else
                 {
                     Gizmos.DrawWireSphere(this.transform.position, _sphereCollider.radius);
-                }                
+                }
             }
         }
 

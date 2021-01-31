@@ -67,7 +67,7 @@ namespace MoreMountains.TopDownEngine
         /// the speed of the moving platform
         public override Vector3 MovingPlatformSpeed
         {
-            get { return _movingPlatformVelocity;  }
+            get { return _movingPlatformVelocity; }
         }
 
         [Header("Movement")]
@@ -98,7 +98,7 @@ namespace MoreMountains.TopDownEngine
         protected Rigidbody _rigidBody;
         protected Collider _collider;
         protected CharacterController _characterController;
-        protected RaycastHit _groundedRaycast;        
+        protected RaycastHit _groundedRaycast;
         protected float _originalColliderHeight;
         protected Vector3 _originalColliderCenter;
         protected Vector3 _originalSizeRaycastOrigin;
@@ -200,7 +200,7 @@ namespace MoreMountains.TopDownEngine
                 ProcessUpdate();
             }
         }
-                
+
         /// <summary>
         /// Computes the new velocity and moves the character
         /// </summary>
@@ -436,7 +436,7 @@ namespace MoreMountains.TopDownEngine
                 CurrentDirection = CurrentMovement.normalized;
             }
         }
-        
+
         /// <summary>
         /// Handles friction with ground surfaces, coming soon
         /// </summary>
@@ -504,7 +504,7 @@ namespace MoreMountains.TopDownEngine
             {
                 return;
             }
-            
+
             _pushDirection.x = hit.moveDirection.x;
             _pushDirection.y = 0;
             _pushDirection.z = hit.moveDirection.z;
@@ -515,7 +515,7 @@ namespace MoreMountains.TopDownEngine
         #endregion
 
         #region Moving Platforms
-        
+
         /// <summary>
         /// Gets the current moving platform's velocity
         /// </summary>
@@ -675,6 +675,7 @@ namespace MoreMountains.TopDownEngine
         /// <param name="offset"></param>
         public override void DetectObstacles(float distance, Vector3 offset)
         {
+
             CollidingWithCardinalObstacle = false;
             _raycastRight = MMDebug.Raycast3D(this.transform.position + offset, Vector3.right, distance, ObstaclesLayerMask, Color.yellow, true);
             if (_raycastRight.collider != null) { DetectedObstacleRight = _raycastRight.collider.gameObject; CollidingWithCardinalObstacle = true; } else { DetectedObstacleRight = null; }
@@ -755,16 +756,16 @@ namespace MoreMountains.TopDownEngine
         /// <param name="newPosition"></param>
         public override void MovePosition(Vector3 newPosition)
         {
-            
-            _movePositionDirection = (newPosition - this.transform.position);
-            _movePositionDistance = Vector3.Distance(this.transform.position, newPosition) ;
 
-            _capsulePoint1 =    this.transform.position 
-                                + _characterController.center 
-                                - (Vector3.up * _characterController.height / 2f) 
-                                + Vector3.up * _characterController.skinWidth 
+            _movePositionDirection = (newPosition - this.transform.position);
+            _movePositionDistance = Vector3.Distance(this.transform.position, newPosition);
+
+            _capsulePoint1 = this.transform.position
+                                + _characterController.center
+                                - (Vector3.up * _characterController.height / 2f)
+                                + Vector3.up * _characterController.skinWidth
                                 + Vector3.up * _characterController.radius;
-            _capsulePoint2 =    this.transform.position
+            _capsulePoint2 = this.transform.position
                                 + _characterController.center
                                 + (Vector3.up * _characterController.height / 2f)
                                 - Vector3.up * _characterController.skinWidth
@@ -777,6 +778,6 @@ namespace MoreMountains.TopDownEngine
         }
 
         #endregion
-        
+
     }
 }
