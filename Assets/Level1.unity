@@ -7857,6 +7857,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartTile
       objectReference: {fileID: 0}
+    - target: {fileID: 6141025933175046409, guid: ed352a91eaa137f4d8a44cf552076730,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3001ec73959b8a2428417406434fe435, type: 2}
     - target: {fileID: 8889755302159222726, guid: ed352a91eaa137f4d8a44cf552076730,
         type: 3}
       propertyPath: m_LocalPosition.x
